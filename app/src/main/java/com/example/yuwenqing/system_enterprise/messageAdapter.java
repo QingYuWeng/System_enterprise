@@ -28,6 +28,7 @@ public class messageAdapter extends RecyclerView.Adapter<messageAdapter.ViewHold
         TextView user_name;
         TextView user_message;
         TextView time;
+        Button delete;
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -35,6 +36,7 @@ public class messageAdapter extends RecyclerView.Adapter<messageAdapter.ViewHold
             user_name=itemView.findViewById(R.id.message_user_name);
             user_message=itemView.findViewById(R.id.message_user_message);
             time=itemView.findViewById(R.id.time);
+            delete=itemView.findViewById(R.id.btnDelete);
         }
     }
 
@@ -55,35 +57,45 @@ public class messageAdapter extends RecyclerView.Adapter<messageAdapter.ViewHold
                 parent.getContext().startActivity(intent);
             }
         });
-
-        view.findViewById(R.id.btnDelete).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(parent.getContext(),"you clicked delete",Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        view.findViewById(R.id.btnTop).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(parent.getContext(),"you clicked Top",Toast.LENGTH_SHORT).show();
-            }
-        });
-
         return viewHolder;
     }
 
     @Override
-    public void onBindViewHolder(final ViewHolder holder, int position) {
+    public void onBindViewHolder(final ViewHolder holder, final int position) {
         Message message=myMessageList.get(position);
         holder.user_icon.setImageResource(message.getUserIcon());
         holder.user_name.setText(message.getName());
         holder.user_message.setText(message.getMessage());
         holder.time.setText(message.getDate());
+
+        holder.delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                removeData(position);
+            }
+        });
     }
 
     @Override
     public int getItemCount() {
         return myMessageList.size();
     }
+
+//    // 添加数据
+//    public void addData(int position) {
+////   在list中添加数据，并通知条目加入一条
+//        myMessageList.add(position, "我是商品" + position);
+//        //添加动画
+//        notifyItemInserted(position);
+//    }
+// 删除数据
+
+    public void removeData(int position) {
+        myMessageList.remove(position);
+        //删除动画
+        notifyItemRemoved(position);
+        notifyItemRangeChanged(position,myMessageList.size()-position);
+//        notifyDataSetChanged();
+    }
+
 }
