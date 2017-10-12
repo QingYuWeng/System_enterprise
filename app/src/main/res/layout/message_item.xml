@@ -1,47 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.mcxtzhang.swipemenulib.SwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingTop="8dp"
-    android:paddingLeft="10dp"
-    android:paddingRight="10dp">
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:clickable="true">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/message_user_icon"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:src="@drawable/user"/>
-
-    <TextView
-        android:id="@+id/message_user_name"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="3dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/message_user_icon"
-        android:text="张三"/>
-    <TextView
-        android:id="@+id/message_user_message"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="8dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/message_user_icon"
-        android:layout_below="@id/message_user_name"
-        android:maxLines="1"
-        android:ellipsize="end"/>
-    <TextView
-        android:id="@+id/time"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:text="2017-10-11"/>
-
-    <View
+    <RelativeLayout
+        android:id="@+id/Item_layout"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="8dp"
-        android:background="#ece9e9"
-        android:layout_below="@id/message_user_icon"/>
+        android:layout_height="wrap_content">
 
-</RelativeLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/message_user_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/user"/>
+
+        <TextView
+            android:id="@+id/message_user_name"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/message_user_icon"
+            android:text="张三"/>
+        <TextView
+            android:id="@+id/message_user_message"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/message_user_icon"
+            android:layout_below="@id/message_user_name"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentRight="true"
+            android:text="2017-10-11"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ece9e9"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/message_user_icon"/>
+    </RelativeLayout>
+
+    <!-- 以下都是侧滑菜单的内容依序排列 -->
+    <Button
+        android:id="@+id/btnTop"
+        android:layout_width="70dp"
+        android:layout_height="match_parent"
+        android:background="#edda01"
+        android:text="置顶"
+        android:textColor="#ffff"/>
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="70dp"
+        android:layout_height="match_parent"
+        android:background="#ef3b3b"
+        android:text="删除"
+        android:textColor="@android:color/white"/>
+
+</com.mcxtzhang.swipemenulib.SwipeMenuLayout>
