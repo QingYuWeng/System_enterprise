@@ -2,11 +2,13 @@ package com.example.yuwenqing.system_enterprise;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,6 +31,8 @@ public class messageAdapter extends RecyclerView.Adapter<messageAdapter.ViewHold
         TextView user_message;
         TextView time;
         Button delete;
+        RelativeLayout layout;
+        Context context;
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -37,6 +41,8 @@ public class messageAdapter extends RecyclerView.Adapter<messageAdapter.ViewHold
             user_message=itemView.findViewById(R.id.message_user_message);
             time=itemView.findViewById(R.id.time);
             delete=itemView.findViewById(R.id.btnDelete);
+            layout=itemView.findViewById(R.id.Item_layout);
+            context=itemView.getContext();
         }
     }
 
@@ -62,7 +68,7 @@ public class messageAdapter extends RecyclerView.Adapter<messageAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, final int position) {
-        Message message=myMessageList.get(position);
+        final Message message=myMessageList.get(position);
         holder.user_icon.setImageResource(message.getUserIcon());
         holder.user_name.setText(message.getName());
         holder.user_message.setText(message.getMessage());
@@ -72,6 +78,16 @@ public class messageAdapter extends RecyclerView.Adapter<messageAdapter.ViewHold
             @Override
             public void onClick(View v) {
                 removeData(position);
+            }
+        });
+
+        holder.layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(holder.context,"you clicked item",Toast.LENGTH_SHORT).show();
+                Intent intent=new Intent(holder.context,ChatActivity.class);
+                intent.putExtra("message",message);
+                holder.context.startActivity(intent);
             }
         });
     }

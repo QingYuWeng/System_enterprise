@@ -1,20 +1,36 @@
 package com.example.yuwenqing.system_enterprise;
 
+import java.io.Serializable;
+
 /**
  * Created by yuwenqing on 2017/10/11.
  */
 
-public class Message {
+public class Message implements Serializable{
     private int userIcon;
     private String name;
     private String message;
     private String date;
+    private int type;
 
-    public Message(int userIcon,String name,String message,String date) {
+    public static final int TYPE_RECEIVED=0;
+    public static final int TYPE_SEND=1;
+
+
+    public Message(int userIcon,String name,String message,String date,int type) {
         this.userIcon=userIcon;
         this.name=name;
         this.message=message;
         this.date=date;
+        this.type=type;
+    }
+
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
     }
 
     public void setDate(String date) {

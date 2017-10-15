@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
                     title.setText("消息");
                     return true;
                 case R.id.navigation_talents:
-                    Toast.makeText(MainActivity.this,"人才库",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this,"实习生",Toast.LENGTH_SHORT).show();
                     showSecondFragment();
                     title.setText("人才库");
                     return true;
