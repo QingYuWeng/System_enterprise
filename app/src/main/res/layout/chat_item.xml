@@ -24,11 +24,11 @@
 
         <TextView
             android:id="@+id/left_message"
-            android:background="@drawable/message_left"
+            android:background="@drawable/nim_message_item_left_selector"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:textColor="#ffff"/>
+            android:textColor="#000000"/>
     </LinearLayout>
 
 
@@ -44,8 +44,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:textColor="#000000"
-            android:background="@drawable/message_right"/>
+            android:layout_margin="5dp"
+            android:textColor="#ffff"
+            android:background="@drawable/nim_message_item_right_selector"/>
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/char_right_icon"
