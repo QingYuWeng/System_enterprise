@@ -1,4 +1,4 @@
-package com.example.yuwenqing.system_enterprise;
+package com.example.yuwenqing.system_enterprise.Class;
 
 import java.io.Serializable;
 

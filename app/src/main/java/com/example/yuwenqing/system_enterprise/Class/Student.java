@@ -1,4 +1,4 @@
-package com.example.yuwenqing.system_enterprise;
+package com.example.yuwenqing.system_enterprise.Class;
 
 /**
  * Created by yuwenqing on 2017/10/12.

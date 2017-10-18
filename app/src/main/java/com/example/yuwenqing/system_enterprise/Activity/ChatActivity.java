@@ -1,4 +1,4 @@
-package com.example.yuwenqing.system_enterprise;
+package com.example.yuwenqing.system_enterprise.Activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,6 +9,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.example.yuwenqing.system_enterprise.Adapter.chatAdapter;
+import com.example.yuwenqing.system_enterprise.Class.Message;
+import com.example.yuwenqing.system_enterprise.R;
 
 import java.util.ArrayList;
 import java.util.List;

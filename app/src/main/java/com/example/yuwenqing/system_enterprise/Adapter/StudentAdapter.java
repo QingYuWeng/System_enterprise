@@ -1,11 +1,13 @@
-package com.example.yuwenqing.system_enterprise;
+package com.example.yuwenqing.system_enterprise.Adapter;
 
 import android.support.v7.widget.RecyclerView;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.example.yuwenqing.system_enterprise.Class.Student;
+import com.example.yuwenqing.system_enterprise.R;
 
 import java.util.List;
 

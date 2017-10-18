@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.example.yuwenqing.system_enterprise.ChatActivity"
+    tools:context="com.example.yuwenqing.system_enterprise.Activity.ChatActivity"
     android:background="#d8e0e8">
 
 
