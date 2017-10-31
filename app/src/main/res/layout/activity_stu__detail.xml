@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bacground"
+    tools:context="com.example.yuwenqing.system_enterprise.Activity.Stu_Detail">
+
+    <include layout="@layout/stu_header_layout"></include>
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:padding="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#29ffffff">
+
+        <TextView
+            android:id="@+id/Detail_Student_Mail_Tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="6dp"
+            android:text="邮箱:"
+            android:textColor="#ffff"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:id="@+id/Detail_Student_Mail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/Detail_Student_Mail_Tag"
+            android:text="1134328499@qq.com"
+            android:textColor="#ffff"
+            android:textSize="20sp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:padding="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#29ffffff">
+
+        <TextView
+            android:id="@+id/Detail_Student_Phone_Tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="6dp"
+            android:text="电话:"
+            android:textColor="#ffff"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:id="@+id/Detail_Student_Phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/Detail_Student_Phone_Tag"
+            android:text="18060952783"
+            android:textColor="#ffff"
+            android:textSize="20sp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:padding="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#29ffffff">
+
+        <TextView
+            android:id="@+id/Detail_Student_School_Tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="6dp"
+            android:text="学校:"
+            android:textColor="#ffff"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:id="@+id/Detail_Student_School"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/Detail_Student_School_Tag"
+            android:text="厦门理工学院"
+            android:textColor="#ffff"
+            android:textSize="20sp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:padding="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#29ffffff">
+
+        <TextView
+            android:id="@+id/Detail_Student_Log_Tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginRight="6dp"
+            android:text="日志"
+            android:textColor="#ffff"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:id="@+id/Detail_Student_Log"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/Detail_Student_Log_Tag"
+            android:text=" "
+            android:textColor="#ffff"
+            android:textSize="20sp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_chevron_right_black_24dp"/>
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/colorAccent"
+        android:text="发送消息"
+        android:textSize="20dp"
+        android:textColor="#ffff"/>
+
+
+
+
+</LinearLayout>

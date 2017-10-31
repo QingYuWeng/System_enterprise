@@ -11,7 +11,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.yuwenqing.system_enterprise.Fragment.firstFragment;
 import com.example.yuwenqing.system_enterprise.Fragment.secondFragment;
@@ -35,17 +34,14 @@ public class MainActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_message:
-                    Toast.makeText(MainActivity.this,"消息",Toast.LENGTH_SHORT).show();
                     showFirstFragment();
                     title.setText("消息");
                     return true;
                 case R.id.navigation_talents:
-                    Toast.makeText(MainActivity.this,"实习生",Toast.LENGTH_SHORT).show();
                     showSecondFragment();
-                    title.setText("人才库");
+                    title.setText("实习生");
                     return true;
                 case R.id.navigation_dashboard:
-                    Toast.makeText(MainActivity.this,"控制台",Toast.LENGTH_SHORT).show();
                     showThirdFragment();
                     title.setText("控制台");
                     return true;

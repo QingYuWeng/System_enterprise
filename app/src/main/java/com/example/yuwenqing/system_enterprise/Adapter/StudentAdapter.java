@@ -1,11 +1,13 @@
 package com.example.yuwenqing.system_enterprise.Adapter;
 
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.yuwenqing.system_enterprise.Activity.Stu_Detail;
 import com.example.yuwenqing.system_enterprise.Class.Student;
 import com.example.yuwenqing.system_enterprise.R;
 
@@ -40,8 +42,15 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.ViewHold
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.student_item,parent,false);
+        final View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.student_item,parent,false);
         ViewHolder viewHolder=new ViewHolder(view);
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(view.getContext(), Stu_Detail.class);
+                view.getContext().startActivity(intent);
+            }
+        });
         return viewHolder;
     }
 
